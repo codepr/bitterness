@@ -1,0 +1,28 @@
+{
+  "name": "bitterness",
+  "version": "0.0.0",
+  "description": "A small library utility methods to calculate bitterness ibu of brew recipe",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baldaz/bitterness.git"
+  },
+  "keywords": [
+    "bitterness",
+    "ibu",
+    "hops",
+    "brew"
+  ],
+  "author": "Andrea Baldan <a.g.baldan@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/baldaz/bitterness/issues"
+  },
+  "devDependencies": {
+    "mocha": "~2.0.1",
+    "chai": "~1.10.0"
+  }
+}
