@@ -1,6 +1,6 @@
 {
   "name": "bitterness",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A small library utility methods to calculate bitterness ibu of brew recipe",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
     "brew"
   ],
   "author": "Andrea Baldan <a.g.baldan@gmail.com>",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baldaz/bitterness/issues"
+    "url": "https://github.com/baldaz/bitterness/blob/master/LICENSE-MIT"
   },
   "devDependencies": {
     "mocha": "~2.0.1",
