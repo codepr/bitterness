@@ -6,3 +6,15 @@ A small library providing utility methods to calculate bitterness of a given rec
 ### Installation
 
 ### Usage
+
+  var bitterness = new bitterness(...),
+      rager = bitterness.rager,
+      tinseth = tinseth.rager;
+
+### Test
+
+  Still creating test.
+
+### Release History
+
+  * 0.1.0 Initial release
