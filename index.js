@@ -1,6 +1,6 @@
 /**
  * Bitterness
- * https://github.com/brentertz/bitterness
+ * https://github.com/codepr/bitterness
  *
  * Copyright (c) 2014 Andrea Baldan
  * Licensed under the MIT license.
