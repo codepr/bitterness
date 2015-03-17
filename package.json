@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/baldaz/bitterness.git"
+    "url": "https://github.com/codepr/bitterness.git"
   },
   "keywords": [
     "bitterness",
@@ -19,7 +19,7 @@
   "author": "Andrea Baldan <a.g.baldan@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baldaz/bitterness/blob/master/LICENSE-MIT"
+    "url": "https://github.com/codepr/bitterness/blob/master/LICENSE-MIT"
   },
   "devDependencies": {
     "mocha": "~2.0.1",
