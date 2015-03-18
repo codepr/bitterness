@@ -13,10 +13,11 @@ A small library providing utility methods to calculate bitterness of a given rec
   var average = bitterness.average(); // ibu value using both formulas
 ```
 ## Test
-
+```js
   npm test
-
+```
 ## Release History
-
+```js
   * 0.1.0 Initial release
   * 0.1.2 Better organization, privatized some functions, writing test.
+```
