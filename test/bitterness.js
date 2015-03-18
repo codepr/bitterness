@@ -16,3 +16,15 @@ describe('#rager', function() {
     bitterness.rager().should.equal(71);
   });
 });
+
+describe('#tinseth', function() {
+    it('calculate ibu', function() {
+        bitterness.tinseth().should.equal(135);
+    });
+});
+
+describe('#average', function() {
+    it('calculate ibu', function() {
+        bitterness.average().should.equal(103);
+    });
+});
