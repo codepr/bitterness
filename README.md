@@ -1,10 +1,12 @@
 Bitterness
 ==========
 
-A small library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit.
+A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit.
 
 ## Installation
-
+```js
+    npm install bitterness
+```
 ## Usage
 ```js
   var bitterness = new bitterness(hop_grams, time, alpha_acids, batch_size, original_gravity);
