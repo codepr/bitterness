@@ -7,9 +7,9 @@ A small library providing utility methods to calculate bitterness of a given rec
 
 ## Usage
 
-  var bitterness = new bitterness(...),
+  var bitterness = new bitterness(hop_grams, time, alpha_acids, batch_size, original_gravity),
       rager = bitterness.rager,
-      tinseth = tinseth.rager;
+      tinseth = bitterness.tinseth;
 
 ## Test
 
