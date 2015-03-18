@@ -13,8 +13,9 @@ A small library providing utility methods to calculate bitterness of a given rec
 
 ## Test
 
-  Still creating test.
+  npm test
 
 ## Release History
 
   * 0.1.0 Initial release
+  * 0.1.2 Better organization, privatized some functions, writing test.
