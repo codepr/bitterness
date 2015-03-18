@@ -6,12 +6,12 @@ A small library providing utility methods to calculate bitterness of a given rec
 ## Installation
 
 ## Usage
-
+```js
   var bitterness = new bitterness(hop_grams, time, alpha_acids, batch_size, original_gravity);
   var rager = bitterness.rager(); // ibu value with rager formula
   var tinseth = bitterness.tinseth(); // ibu value with tinseth formula
   var average = bitterness.average(); // ibu value using both formulas
-
+```
 ## Test
 
   npm test
