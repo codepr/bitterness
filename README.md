@@ -37,5 +37,5 @@ A basic library providing utility methods to calculate bitterness of a given rec
 ```js
   * 0.1.0 Initial release.
   * 0.1.2 Better organization, privatized some functions, writing test.
-  * 0.1.4 Module pattern design. Updated usage section.
+  * 0.1.5 Module pattern design. Updated usage section.
 ```
