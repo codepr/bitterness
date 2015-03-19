@@ -22,12 +22,6 @@ A basic library providing utility methods to calculate bitterness of a given rec
                                    alpha_acids, // AA% in the form of % (e.g. 6% => 6)
                                    batch_size, // size of the batch in liters
                                    original_gravity); // OG in the form xxxx.xx (e.g. 1050.00)
-  // ibu value using both formulas
-  var average = bitterness.average(hop_grams, // grams of hop
-                                   time, // time in minutes
-                                   alpha_acids, // AA% in the form of % (e.g. 6% => 6)
-                                   batch_size, // size of the batch in liters
-                                   original_gravity); // OG in the form xxxx.xx (e.g. 1050.00)
   // ibu value using Garetz formula
   var garetz = bitterness.garetz(hop_grams, // grams of hop
                                  time, // time in minutes
@@ -36,6 +30,16 @@ A basic library providing utility methods to calculate bitterness of a given rec
                                  original_gravity, // OG in the form xxxx.xx (e.g. 1050.00)
                                  final_volume // size of the volume post boil in liters
                                  height); // height in meters of the boiling batch
+  // ibu value using mixed formulas
+  var average = bitterness.average(hop_grams, // grams of hop
+                                   time, // time in minutes
+                                   alpha_acids, // AA% in the form of % (e.g. 6% => 6)
+                                   batch_size, // size of the batch in liters
+                                   original_gravity, // OG in the form xxxx.xx (e.g. 1050.00)
+                                   final_volume // size of the volume post boil in liters, optional
+                                   height); // height in meters of the boiling batch, optional
+
+  In the average method, final_volume and height are optional, if omitted it will use only Rager and Tinseth methods in computation, otherwise height is defaulted at 0 meters if omitted.
 ```
 ## Test
 ```js
@@ -47,4 +51,5 @@ A basic library providing utility methods to calculate bitterness of a given rec
   0.1.2 Better organization, privatized some functions, writing test.
   0.1.5 Module pattern design. Updated usage section.
   0.1.6 Added Garetz method for IBU calculation.
+  0.1.7 Added Garetz into the average method, optional.
 ```
