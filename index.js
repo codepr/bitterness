@@ -2,7 +2,7 @@
  * Bitterness
  * https://github.com/codepr/bitterness
  *
- * Copyright (c) 2014 Andrea Baldan
+ * Copyright (c) 2014 - 2015 Andrea Baldan
  * Licensed under the MIT license.
  *
  **
