@@ -39,7 +39,23 @@ A basic library providing utility methods to calculate bitterness of a given rec
                                    final_volume // size of the volume post boil in liters, optional
                                    height); // height in meters of the boiling batch, optional
 
-  In the average method, final_volume and height are optional, if omitted it will use only Rager and Tinseth methods in computation, otherwise height is defaulted at 0 meters if omitted.
+  // In the average method, final_volume and height are optional, if omitted it will use only Rager and Tinseth methods in computation, otherwise height is defaulted at 0 meters if omitted.
+```
+Example:
+```js
+  var bitterness = require('bitterness');
+  var rager = bitterness.rager;
+  // 93 grams, 90 minutes boil time, 6% alpha acids, 25 liters batch, 1050 og
+  var r = rager(93, 90, 6, 25, 1050);
+  // cache the last stats inserted in any previous method
+  var g = bitterness.garetz(); // using defaulted final volume = (batch size - 10%) and height = 0
+
+  console.log(r); // 71 ibu
+  console.log(g); // 64 ibu
+
+  // returns the sum of all hop additions, taking in account only parameterized calls
+  var additions = bitterness.ibu();
+  console.log(additions); // 71 ibu, corresponding to r var
 ```
 ## Test
 ```js
@@ -52,4 +68,5 @@ A basic library providing utility methods to calculate bitterness of a given rec
   0.1.5 Module pattern design. Updated usage section.
   0.1.6 Added Garetz method for IBU calculation.
   0.1.7 Added Garetz into the average method, optional.
+  0.1.9 Corrected Tinseth formula, added cache of last addition, and subtotal.
 ```
