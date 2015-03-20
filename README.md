@@ -1,7 +1,7 @@
 Bitterness
 ==========
 
-A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available.
+A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available. Measure system default set at metric, supports imperial system.
 
 ## Installation
 ```sh
@@ -54,8 +54,20 @@ Example:
   console.log(g); // 64 ibu
 
   // returns the sum of all hop additions, taking in account only parameterized calls
-  var additions = bitterness.ibu();
-  console.log(additions); // 71 ibu, corresponding to r var
+  var total_ibu = bitterness.ibu();
+  console.log(total_ibu); // 71 ibu, corresponding to r var
+
+  var additions = bitterness.additions();
+  console.log(additions) // [71]
+
+  bitterness.metric(false); // set system to imperial
+  // 3.17 oz, 90 minutes, 6% alpha acids, 6.60 gallons, 1050 og
+  var r = rager(3.17, 90, 6, 6.60, 1050);
+  bitterness.metric(true); // back to metric system
+
+  additions = bitterness.additions();
+  console.log(additions) // [71, 68];
+
 ```
 ## Test
 ```js
@@ -69,4 +81,5 @@ Example:
   0.1.6 Added Garetz method for IBU calculation.
   0.1.7 Added Garetz into the average method, optional.
   0.1.9 Corrected Tinseth formula, added cache of last addition, and subtotal.
+  1.0.0 Metric/Imperial system switch added.
 ```
