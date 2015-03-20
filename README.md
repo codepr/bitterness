@@ -4,7 +4,7 @@ Bitterness
 A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available.
 
 ## Installation
-```js
+```sh
     npm install bitterness
 ```
 ## Usage
