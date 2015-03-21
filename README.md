@@ -6,6 +6,8 @@ A basic library providing utility methods to calculate bitterness of a given rec
 ## Installation
 ```sh
     npm install bitterness
+    # for development purpose install (e.g. running tests) need mocha and chai (much longer install)
+    npm install bitterness --dev
 ```
 ## Usage
 ```js
@@ -39,7 +41,7 @@ A basic library providing utility methods to calculate bitterness of a given rec
                                    final_volume // size of the volume post boil in liters, optional
                                    height); // height in meters of the boiling batch, optional
 
-  // In the average method, final_volume and height are optional, if omitted it will use only Rager and Tinseth methods in computation, otherwise height is defaulted at 0 meters if omitted.
+  // In the average method, final_volume and height are optional, final_volume is defaulted at final_volume - 10% (average boil time loss), height is defaulted at 0 meters if omitted.
 ```
 Example:
 ```js
@@ -49,9 +51,12 @@ Example:
   var r = rager(93, 90, 6, 25, 1050);
   // cache the last stats inserted in any previous method
   var g = bitterness.garetz(); // using defaulted final volume = (batch size - 10%) and height = 0
+  // average
+  var a = bitterness.average(); // mix 3 formulas using defaulted final volume and height
 
-  console.log(r); // 71 ibu
-  console.log(g); // 64 ibu
+  console.log(r); // ~ 71 ibu
+  console.log(g); // ~ 64 ibu
+  console.log(a); // ~ 66 ibu
 
   // returns the sum of all hop additions, taking in account only parameterized calls
   var total_ibu = bitterness.ibu();
@@ -66,7 +71,13 @@ Example:
   bitterness.metric(true); // back to metric system
 
   additions = bitterness.additions();
-  console.log(additions) // [71, 68];
+  console.log(additions) // [71, 68]
+
+  bitterness.clean(); // empty additions history
+  additions = bitterness.additions();
+  total_ibu = bitterness.ibu();
+  console.log(additions) // []
+  console.log(total_ibu) // 0
 
 ```
 ## Test
@@ -82,4 +93,5 @@ Example:
   0.1.7 Added Garetz into the average method, optional.
   0.1.9 Corrected Tinseth formula, added cache of last addition, and subtotal.
   1.0.0 Metric/Imperial system switch added.
+  1.0.2 Corrected some bugs.
 ```
