@@ -1,5 +1,6 @@
 Bitterness
 ==========
+[![Build Status](https://travis-ci.org/codepr/bitterness.svg?branch=master)](https://travis-ci.org/codepr/bitterness)
 
 A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available. Measure system default set at metric, supports imperial system.
 
