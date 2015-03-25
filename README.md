@@ -41,7 +41,8 @@ A basic library providing utility methods to calculate bitterness of a given rec
                                    final_volume // size of the volume post boil in liters, optional
                                    height); // height in meters of the boiling batch, optional
 
-  // In the average method, final_volume and height are optional, final_volume is defaulted at final_volume - 10% (average boil time loss), height is defaulted at 0 meters if omitted.
+  // In the average method, final_volume and height are optional, final_volume
+  // is defaulted at final_volume - 10% (average boil time loss), height is defaulted at 0 meters if omitted.
 ```
 Example:
 ```js
