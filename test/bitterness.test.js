@@ -82,4 +82,13 @@ describe('#3  w: 3.17 oz, t: 90 mins, aa: 6%, b: 6.6 gal, og: 1050', function() 
         bitterness.ibu().should.equal(0);
     });
 
+    it('Update data', function() {
+        bitterness.set({original_gravity:1063,
+                        batch_size: 60,
+                        hop_weight: 56,
+                        alpha_acids:12,
+                        time: 70});
+        bitterness.rager().should.equal(68.91);
+    });
+
 });

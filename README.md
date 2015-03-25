@@ -2,7 +2,7 @@ Bitterness
 ==========
 [![Build Status](https://travis-ci.org/codepr/bitterness.svg?branch=master)](https://travis-ci.org/codepr/bitterness)
 
-A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available. Measure system default set at metric, supports imperial system.
+A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available. Measure system default set at metric, supports imperial system. Has a built-in cache system that maintain last data inserted for future measure and can give the total IBU of the batch session.
 
 ## Installation
 ```sh
@@ -45,7 +45,7 @@ A basic library providing utility methods to calculate bitterness of a given rec
   // In the average method, final_volume and height are optional, final_volume
   // is defaulted at final_volume - 10% (average boil time loss), height is defaulted at 0 meters if omitted.
 ```
-Example:
+Practical example:
 ```js
   var bitterness = require('bitterness');
   var rager = bitterness.rager;
@@ -75,6 +75,15 @@ Example:
   additions = bitterness.additions();
   console.log(additions) // [71, 68]
 
+  // it's possible to set / update current status stats
+  // by passing and anonymous object
+  bitterness.set({original_gravity:1063,
+                  batch_size: 60,
+                  hop_weight: 56,
+                  alpha_acids:12,
+                  time: 70});
+  bitterness.rager() // 68.91
+
   bitterness.clean(); // empty additions history
   additions = bitterness.additions();
   total_ibu = bitterness.ibu();
@@ -83,11 +92,11 @@ Example:
 
 ```
 ## Test
-```js
+```
   npm test
 ```
 ## Release History
-```js
+```
   0.1.0 Initial release.
   0.1.2 Better organization, privatized some functions, writing test.
   0.1.5 Module pattern design. Updated usage section.
@@ -96,4 +105,28 @@ Example:
   0.1.9 Corrected Tinseth formula, added cache of last addition, and subtotal.
   1.0.0 Metric/Imperial system switch added.
   1.0.2 Corrected some bugs.
+  1.0.3 Added some features.
 ```
+## License
+Copyright (c) 2014 Andrea Baldan
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.

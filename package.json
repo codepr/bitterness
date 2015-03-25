@@ -1,6 +1,6 @@
 {
   "name": "bitterness",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small library providing utility methods to calculate bitterness ibu of brew recipe",
   "main": "index",
   "scripts": {
