@@ -4,13 +4,13 @@ Bitterness
 
 A basic library providing utility methods to calculate bitterness of a given recipe, in IBU measure unit, featuring Rager forumula, Tinseth formula or an average of the two, Garetz formula is also available. Measure system is defaulted at European decimal system, supports Imperial system too.
 
-## Installation
+### Installation
 ```sh
 npm install bitterness
 # for development purpose install (e.g. running tests) need mocha and chai
 npm install bitterness --dev
 ```
-## Usage
+### Usage
 ```js
 var bt = require('bitterness');
 // ibu value with Rager formula
@@ -38,7 +38,7 @@ var garetz = bt.garetz(
 		height); // height in meters of the boiling batch
 
 ```
-Practical example:
+### Practical example:
 ```js
 var bt = require('bitterness');
 var rager = bt.rager;
@@ -55,14 +55,14 @@ var r = rager(3.17, 90, 6, 6.60, 1050);
 
 ```
 
-## Test
+### Test
 ```sh
 npm test
 ```
-## Changelog
+### Changelog
 
 See the [CHANGELOG](CHANGELOG.md) file.
 
-## License
+### License
 
 See the [LICENSE-MIT](LICENSE-MIT) file for license rights and limitations (MIT).
