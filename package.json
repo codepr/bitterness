@@ -1,6 +1,6 @@
 {
   "name": "bitterness",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A small library providing utility methods to calculate bitterness ibu of brew recipe",
   "main": "index",
   "scripts": {
@@ -17,10 +17,10 @@
     "hops",
     "brew",
     "beer",
-	"recipe",
-	"original",
-	"gravity",
-	"final",
+    "recipe",
+    "original",
+    "gravity",
+    "final",
     "rager",
     "garetz",
     "tinseth"
