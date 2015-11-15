@@ -53,7 +53,8 @@ bt.setMetricSystem(false); // set system to imperial
 // 3.17 oz, 90 minutes, 6% alpha acids, 6.60 gallons, 1050 og
 var r = rager(3.17, 90, 6, 6.60, 1050);
 
-	```
+```
+
 ## Test
 	```
 	npm test
