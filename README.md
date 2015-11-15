@@ -56,9 +56,9 @@ var r = rager(3.17, 90, 6, 6.60, 1050);
 ```
 
 ## Test
-	```
-	npm test
-	```
+```sh
+npm test
+```
 ## Changelog
 
 See the [CHANGELOG](CHANGELOG.md) file.
